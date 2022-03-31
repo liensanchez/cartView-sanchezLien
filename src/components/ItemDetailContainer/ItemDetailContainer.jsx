@@ -11,11 +11,9 @@ function ItemDetailContainer() {
     
    <>
 
-  
-
     { detalle.map ((data) => <div key={data.id} >
 
-                                      <button className='btn-primary'>
+                                      <button className='btn-primary bg-secondary'>
 
                                         {`${data.precio}`}
 
@@ -24,6 +22,7 @@ function ItemDetailContainer() {
                               </div> )}
   
   </>
+
   )
 
 }

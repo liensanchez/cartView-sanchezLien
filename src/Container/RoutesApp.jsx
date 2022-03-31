@@ -18,13 +18,11 @@ function RoutesApp() {
 
       <ItemListContainer greeting='List item' />
 
-      <Titulo 
-            tituloProps='titulo'
-            subtituloProps='soy subtitulo de app' 
-      /> {/*Extremadamente modular y dinamico porque directamente lo hice una sola vez */}
-          {/*tmb se puede poner como Titulo()*/}
 
-      <ItemList/>
+      <div className='d-flex justify-content-center'>
+        <ItemList/>
+      </div>
+      
 
       
     </>

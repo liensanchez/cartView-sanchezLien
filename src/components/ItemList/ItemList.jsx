@@ -7,31 +7,33 @@ import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 function ItemList() {
   return (
-    <div>
+    
+    <>
 
-    { productos.map ((producto) => <div key={producto.id} className='col-md-4'>
+    { productos.map ((producto) => <div key={producto.id} className='col-md-4 p-1'>
 
                                       <div className="card-w-100 mt-5">
 
-                                            <div className="card-header">
+                                            <div className="card-header d-flex justify-content-center">
 
-                                              {`${producto.name}`}
+                                              <h2>{`${producto.name}`}</h2>
 
                                             </div>
 
-                                            <div className="card-body">
+                                            <div className="card-body d-flex justify-content-center ">
 
-                                              <img src={producto.img} alt="" className='w-50'/>
+                                              <img src={producto.img} alt="" className='h-50 w-50' />
 
                                             </div>
 
                                             <ItemDetailContainer/>
 
-                                            </div>
+                                      </div>
 
-                                        </div> )}
+                                    </div> )}
                                     
-                                    </div>
+    </>   
+
   )
 }
 
