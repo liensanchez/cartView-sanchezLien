@@ -12,6 +12,8 @@ function ItemDetailContainer() {
    <>
 
     { detalle.map ((data) => <div key={data.id} >
+                                      
+                                      <h2>{`${data.bateria}`} </h2>
 
                                       <button className='btn-primary bg-secondary'>
 

@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar/NavBar';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 import productos from '../components/Item/Item';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer';
 
 
 function RoutesApp() {
@@ -27,6 +28,18 @@ function RoutesApp() {
         
                  }
           
+          />
+
+          <Route
+
+                 path='/detalle'
+
+                 element={
+
+                    <ItemDetailContainer/>
+
+                 }
+
           />
 
         </Routes> 

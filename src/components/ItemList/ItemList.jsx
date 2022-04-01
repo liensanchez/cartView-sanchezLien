@@ -2,17 +2,19 @@ import productos from '../Item/Item';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+import { Link } from 'react-router-dom';
 
 
 
 function ItemList() {
+  
   return (
     
     <>
 
     { productos.map ((producto) => <div key={producto.id} className='col-md-4 p-1'>
 
-                                      <div className="card-w-100 mt-5">
+                                      <div className="card-w-100 mt-5 ">
 
                                             <div className="card-header d-flex justify-content-center">
 
@@ -26,7 +28,11 @@ function ItemList() {
 
                                             </div>
 
-                                            <ItemDetailContainer/>
+                                            <div className='d-flex justify-content-center'>
+
+                                            <button className='btn-primay bg-secondary'><Link to='/detalle'> Detalle </Link></button>
+                                            
+                                            </div>
 
                                       </div>
 

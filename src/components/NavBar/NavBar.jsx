@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../Carrito/CartWidget';
+import { NavLink } from 'react-router-dom';
 
 
 function NavBar() {
@@ -16,7 +17,7 @@ function NavBar() {
 
       <Container>
 
-        <Navbar.Brand href="#home"><img src="https://i.ibb.co/V2jcGcT/logo.jpg" /></Navbar.Brand>
+        <NavLink to='/' ><img src="https://i.ibb.co/V2jcGcT/logo.jpg" /></NavLink>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
