@@ -1,9 +1,8 @@
 import React from 'react';
 import NavBar from '../components/NavBar/NavBar';
-import Titulo from '../components/Titulo/Titulo';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
-import ItemList from '../components/ItemList/ItemList';
 import productos from '../components/Item/Item';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 function RoutesApp() {
@@ -12,20 +11,27 @@ function RoutesApp() {
 
   return (
 
-    <>
-     
+    <BrowserRouter>
+
       <NavBar/>
 
-      <ItemListContainer greeting='List item' />
+        <Routes>
 
+          <Route               
 
-      <div className='d-flex justify-content-center'>
-        <ItemList/>
-      </div>
+                path="/"
+
+                element={
+
+                <ItemListContainer />
+        
+                 }
+          
+          />
+
+        </Routes> 
       
-
-      
-    </>
+    </BrowserRouter>
   )
 
 }

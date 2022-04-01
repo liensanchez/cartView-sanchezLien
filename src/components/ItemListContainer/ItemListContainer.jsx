@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from 'react';
-import productos from '../Item/Item'
-
+import productos from '../Item/Item';
+import ItemList from '../ItemList/ItemList';
 
 
 
@@ -47,7 +47,11 @@ function ItemListContainer({greeting}) {
 
     <>
 
-    
+      <div className='d-flex justify-content-center'>
+
+        <ItemList/>
+
+      </div>
 
     </>
     
