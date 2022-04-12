@@ -1,7 +1,35 @@
-const detalle  = [
-  {id:'1', modelo:'iphone7', precio:"40000", memoria:'32gb', bateria:'100%'},
-  {id:'2', modelo:'iphone7plus', precio:'80000', memoria:'32gb', bateria:'100%'},
-  {id:'3', modelo:'iphone8', precio:'90000', memoria:'64gb', bateria:'100%'}
-  ];
+import {useParams} from 'react-router-dom'
+import productos from '../Item/Item';
 
-export default detalle
+
+import React from 'react'
+
+function ItemDetail({producto}) {
+
+  const {modelo} = useParams();
+  
+  return (
+    
+   <>
+
+    { productos
+    .filter ((producto) => producto.modelo === modelo)
+    .map ((producto) => <div key={producto.id} >
+                                      
+                                      <h2>{`${producto.name}`} </h2>
+
+                                      <button className='btn-primary bg-secondary'>
+
+                                        {`${producto.precio}`}
+
+                                      </button>
+                                
+                              </div> )}
+  
+  </>
+
+  )
+
+}
+
+export default ItemDetail
