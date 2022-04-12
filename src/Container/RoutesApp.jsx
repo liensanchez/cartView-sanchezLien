@@ -32,7 +32,7 @@ function RoutesApp() {
 
           <Route
 
-                 path='/detalle'
+                 path='/detalle/:modelo'
 
                  element={
 

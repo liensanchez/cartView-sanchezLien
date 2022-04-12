@@ -1,23 +1,28 @@
 import React from 'react';
 import detalle from '../ItemDetail/ItemDetail';
+import {useParams} from 'react-router-dom'
+import productos from '../Item/Item';
 
 
 
-function ItemDetailContainer() {
 
+function ItemDetailContainer({producto}) {
 
+  const {modelo} = useParams();
   
   return (
     
    <>
 
-    { detalle.map ((data) => <div key={data.id} >
+    { productos
+    .filter ((producto) => producto.modelo === modelo)
+    .map ((producto) => <div key={producto.id} >
                                       
-                                      <h2>{`${data.bateria}`} </h2>
+                                      <h2>{`${producto.name}`} </h2>
 
                                       <button className='btn-primary bg-secondary'>
 
-                                        {`${data.precio}`}
+                                        {`${producto.precio}`}
 
                                       </button>
                                 

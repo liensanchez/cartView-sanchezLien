@@ -22,7 +22,7 @@ function ItemList() {
 
                                             </div>
 
-                                            <div className="card-body d-flex justify-content-center ">
+                                            <div className="card-body d-flex justify-content-center h-50 w-50">
 
                                               <img src={producto.img} alt="" className='h-50 w-50' />
 
@@ -30,7 +30,7 @@ function ItemList() {
 
                                             <div className='d-flex justify-content-center'>
 
-                                            <button className='btn-primay bg-secondary'><Link to='/detalle'> Detalle </Link></button>
+                                            <Link to={`/detalle/${producto.modelo}`}><button className='btn-primay bg-secondary'> Detalle </button></Link>
                                             
                                             </div>
 
