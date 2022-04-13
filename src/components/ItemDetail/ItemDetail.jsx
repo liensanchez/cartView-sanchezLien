@@ -2,6 +2,7 @@ import {useParams} from 'react-router-dom'
 import productos from '../Item/Item';
 
 
+//probando push git
 import React from 'react'
 
 function ItemDetail({producto}) {
